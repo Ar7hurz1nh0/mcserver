@@ -13,3 +13,4 @@ world
 *.log
 mods/EasyAuth/levelDBStore
 mods/disabled
+./mcsleepingserverstarter-linux-x64
