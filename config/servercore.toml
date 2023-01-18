@@ -27,8 +27,8 @@
 	# (Default = 5) The amount of minutes in between auto-save intervals when /save-on is active.
 	auto_save_interval = 5
 	# (Default = 0.5) Decides the radius in blocks that items / xp will merge at.
-	item_merge_radius = 1.2
-	xp_merge_radius = 2.5
+	item_merge_radius = 3
+	xp_merge_radius = 5
 
 # Modifies mobcaps, no-chunk-tick, simulation and view-distance depending on the MSPT.
 [dynamic]
@@ -37,7 +37,7 @@
 	# (Default = 35) The average MSPT to target.
 	target_mspt = 20
 	# (Default = 15) The amount of seconds between dynamic performance updates.
-	update_rate = 5
+	update_rate = 10
 	# (Default = 150) The amount of seconds between dynamic viewdistance updates.
 	# This value is separate from the other checks because it makes all clients reload their chunks.
 	view_distance_update_rate = 120
