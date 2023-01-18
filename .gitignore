@@ -1,0 +1,15 @@
+_backup
+.fabric
+.mixin.out
+backup
+crash-reports
+DiscordIntegration-Data
+libraries
+logs
+mcmap
+probably-broken-regions
+versions
+world
+*.log
+mods/EasyAuth/levelDBStore
+mods/disabled

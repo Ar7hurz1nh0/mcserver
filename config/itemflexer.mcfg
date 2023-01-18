@@ -1,0 +1,5 @@
+cooldown=0
+chatMessage=%player:displayname% exibe seu/sua %itemflexer:item%
+failureNoItem=Infelizmente você é pobre, não tem nada para exibir
+failureOnCooldown=On Cooldown: %itemflexer:cooldown% seconds left
+commandName=flex

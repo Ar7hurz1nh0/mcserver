@@ -1,0 +1,69 @@
+{
+	"data": [
+		{
+			"priority": 2,
+			"mobId": "minecraft:zombie"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:zombie_villager"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:zombified_piglin"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:silverfish"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:endermite"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:enderman"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:wither_skeleton"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:skeleton"
+		},
+		{
+			"priority": 3,
+			"mobId": "minecraft:spider"
+		},
+		{
+			"priority": 3,
+			"mobId": "minecraft:cave_spider"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:pillager"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:vindicator"
+		},
+		{
+			"priority": 4,
+			"mobId": "minecraft:illusioner"
+		},
+		{
+			"priority": 2,
+			"mobId": "minecraft:witch"
+		},
+		{
+			"priority": 1,
+			"mobId": "minecraft:iron_golem"
+		},
+		{
+			"priority": 4,
+			"mobId": "minecraft:creeper"
+		}
+	],
+	"configVersion": "0.2.1"
+}

@@ -1,0 +1,11 @@
+serverName: "CDMD Watcher"
+serverPort: 25569
+bedrockPort: 0
+maxPlayers: 20
+loginMessage: "[CDMD Watcher] Waking server up"
+serverOnlineMode: false
+webPort: 0
+webStopOnStart: true
+startMinecraft: true
+minecraftCommand: "sh start.sh"
+version: 1.19
