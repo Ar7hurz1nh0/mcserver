@@ -1,5 +1,5 @@
 version = 3
-# (Default: 2) Configures the parallelism of global executor
+# (Default: 11) Configures the parallelism of global executor
 globalExecutorParallelism = 3
 
 [noTickViewDistance]
@@ -78,7 +78,7 @@ globalExecutorParallelism = 3
 	# (Default: true) Whether to allow reducing lock radius 
 	# (may cause incompatibility with other mods)
 	reduceLockRadius = "default"
-	# (Default: false) Whether to enable this feature
+	# (Default: true) Whether to enable this feature
 	enabled = true
 
 [vanillaWorldGenOptimizations]

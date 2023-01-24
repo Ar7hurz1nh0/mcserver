@@ -27,8 +27,8 @@
 	# (Default = 5) The amount of minutes in between auto-save intervals when /save-on is active.
 	auto_save_interval = 5
 	# (Default = 0.5) Decides the radius in blocks that items / xp will merge at.
-	item_merge_radius = 3
-	xp_merge_radius = 5
+	item_merge_radius = 0.5
+	xp_merge_radius = 0.5
 
 # Modifies mobcaps, no-chunk-tick, simulation and view-distance depending on the MSPT.
 [dynamic]
