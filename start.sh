@@ -110,7 +110,7 @@ fi
 # crontab -l | sed "/^#.*\/mnt\/d\/etec\/cdmd+1.19\/incbak.sh/s/^#//" | crontab -
 # crontab -l | sed "/^#.*\/mnt\/d\/etec\/cdmd+1.19\/backup.sh/s/^#//" | crontab -
 
-KEY="x-key: $(cat forwarding.secret)"
+KEY="\"x-key: $(cat forwarding.secret)\""
 PROXYIP=`cat proxyip`
 
 curl --header $KEY "${PROXYIP}:25500"
