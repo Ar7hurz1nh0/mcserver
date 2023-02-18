@@ -2,7 +2,7 @@
 [general]
   # Insert your Bot Token here!
   # DO NOT SHARE IT WITH ANYONE!
-  botToken = "NzgyNDU1MzUyNTcwMjgxOTg1.X8McVQ.gEwN8VdPn9KIZuftdscLPfPmOE0"
+  botToken = "NjMzMDQ4MzExNzY2NzEyMzMw.Gz0tJW.4-eJSWF-TGlHXSDBOyy6RG4d2hIZ27zykpFuiA"
   # The channel ID where the bot will be working in
   botChannel = "597688881285955626"
   # The bot's status message
@@ -10,10 +10,10 @@
   # PLACEHOLDERS:
   # %online% - Online Players
   # %max% - Maximum Player Amount
-  botStatusName = "%online% players"
+  botStatusName = "%online% players Online"
   # Type of the bot's status
   # Allowed Values: DISABLED,PLAYING,WATCHING,LISTENING,STREAMING,COMPETING
-  botStatusType = "WATCHING"
+  botStatusType = "STREAMING"
   # URL of the bot's stream when using the status type 'STREAMING'
   # Has to start with https://twitch.tv/ or https://www.youtube.com/watch?v=
   streamingURL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -22,17 +22,24 @@
   enableUpdateChecker = true
   # The minimum release type for the update checker to notify
   # Allowed values: release, beta, alpha
-  updateCheckerMinimumReleaseType = "beta"
+  updateCheckerMinimumReleaseType = "release"
   # Set to false to disable config migration from other mods/plugins to this one
   # This does not prevent updating of this config after mod updates
   allowConfigMigration = true
   # Attempt to parse id-based mentions to names in in-game chat
   parseMentionsIngame = true
+  # Set to true to supress warning of unsafe mod download location
+  ignoreFileSource = false
+  # Set to true to allow relaying webhook messages
+  allowWebhookMessages = false
 # Configuration options for commands
 [commands]
+  # Toggle the entire command feature
+  # Disabling this will disable registering any commands to discord
+  enabled = true
   # The Role IDs of your Admin Roles
   # Now supports multiple roles which can access admin commands
-adminRoleIDs = [    ]
+adminRoleIDs = [  "963397168197173258"  ]
   # Add your custom commands here
   # You can also generate some on https://erdbeerbaerlp.de/dcintegration-commands/
   # You must op this UUID in the ops.txt or some custom commands won't work!
@@ -56,6 +63,7 @@ adminRoleIDs = [    ]
       name = "kick"
       description = "Kicks an player from the Server"
       mcCommand = "kick %player% %reason%"
+      textToSend = ""
       adminOnly = true
       hidden = false
 
@@ -73,6 +81,7 @@ adminRoleIDs = [    ]
       name = "stop"
       description = "Stops the server"
       mcCommand = "stop"
+      textToSend = ""
       adminOnly = true
       hidden = false
 args = [    ]
@@ -81,6 +90,7 @@ args = [    ]
       name = "kill"
       description = "Kills an Player or Entity"
       mcCommand = "kill %target%"
+      textToSend = ""
       adminOnly = true
       hidden = false
 
@@ -90,6 +100,9 @@ args = [    ]
           optional = false
 # Toggle some message related features
 [messages]
+  # Changing this to an language key (like en-US, de-DE) will always attempt to download the latest language file from https://github.com/ErdbeerbaerLP/Discord-Integration-Translations
+  # Setting to 'local' disables downloading
+  language = "local"
   # Enable formatting conversion (Markdown <==> Minecraft)
   convertCodes = true
   # Send formatting codes from mc chat to discord
@@ -107,16 +120,16 @@ args = [    ]
 [advanced]
   # Custom channel ID for server specific messages (like Join/leave)
   # Leave 'default' to use default channel
-  serverChannelID = "963552952629485568"
+  serverChannelID = "597688881285955626"
   # Custom channel ID for death messages
   # Leave 'default' to use default channel
-  deathsChannelID = "963552952629485568"
+  deathsChannelID = "597688881285955626"
   # Custom channel for for ingame messages
   # Leave 'default' to use default channel
-  chatOutputChannelID = "default"
+  chatOutputChannelID = "597688881285955626"
   # Custom channel where messages get sent to minecraft
   # Leave 'default' to use default channel
-  chatInputChannelID = "default"
+  chatInputChannelID = "597688881285955626"
   # Allows you to change the target URL for the API to make it usable with custom discord instances like fosscord
   # DO NOT CHANGE if you don't know what you are doing!!
   baseAPIUrl = "https://discord.com"
@@ -134,16 +147,27 @@ IMC_modIdBlacklist = [  "examplemod"  ]
   # Should discord linking be enabled?
   # If whitelist is on, this can NOT be disabled
   # DOES NOT WORK IN OFFLINE MODE!
-  enableLinking = true
+  enableLinking = false
+  # Set Discord nicknames to match Minecraft usernames when linked
+  shouldNickname = false
+  # Enable global linking?
+  # Does not work in offline mode
+  globalLinking = false
+  # Database interface class
+  # This allows you to change your database implementation
+  # Do not change without knowing what you are doing
+  databaseClass = "de.erdbeerbaerlp.dcintegration.common.storage.database.SQLiteInterface"
   # Role ID of an role an player should get when he links his discord account
   # Leave as 0 to disable
   linkedRoleID = "963395554291896340"
   # Enable discord based whitelist?
   # This will override the link config!
   # To whitelist use the whitelist command in the bot DMs
-  whitelistMode = true
+  whitelistMode = false
   # Adding Role IDs here will require the players to have at least ONE of these roles to link account
 requiredRoles = [    ]
+  # Adding setting keys to this array will prevent thoose settings to be changed
+  # They will still show up in the list though
 settingsBlacklist = [    ]
 
     # Allows you to configure the default values of some personal settings
@@ -156,9 +180,9 @@ settingsBlacklist = [    ]
   # Whether or not the bot should use a webhook (it will create one)
   enable = true
   # The avatar to be used for server messages
-  serverAvatarURL = "https://raw.githubusercontent.com/ErdbeerbaerLP/Discord-Chat-Integration/master/images/srv.png"
+  serverAvatarURL = "https://cdn.discordapp.com/icons/557660851486588939/a_f363a070900115d6452d113152642267.png?size=128"
   # The name to be used for server messages
-  serverName = "Jonas, o Comunista"
+  serverName = "Servidor Comunista"
   # The URL where the player avatar gets fetched from
   # 
   # PLACEHOLDERS:
@@ -167,13 +191,13 @@ settingsBlacklist = [    ]
   # %name% - Returns the player's name
   # %randomUUID% - Returns an random UUID which can be used to prevent discord cache
   playerAvatarURL = "https://minotar.net/avatar/%uuid%?randomuuid=%randomUUID%"
-  webhookName = "MC_DISCORD_INTEGRATION"
+  webhookName = "MC_DC_INTEGRATION"
 # Configuration for the in-game command '/discord'
 [ingameCommand]
   # Enable the /discord command to show an custom message with invite URL?
   enabled = true
   # The message displayed when typing /discord in the server chat
-  message = "Join our discord! https://discord.gg/XptyQXv"
+  message = "Join our discord!"
   # The message shown when hovering the /discord command message
   hoverMessage = "Click to open the invite url"
   # The url to open when clicking the /discord command text
@@ -196,7 +220,7 @@ ignoredCommands = [  "list", "help", "?"  ]
 # (Spigot only)
 [votifier]
   # Should votifier messages be sent to discord?
-  enabled = true
+  enabled = false
   # Custom channel ID for Votifier messages
   # Leave 'default' to use default channel
   votifierChannelID = "default"
@@ -225,7 +249,7 @@ ignoredCommands = [  "list", "help", "?"  ]
   # Name of the webhook title
   name = "Dynmap Web-Chat"
   # URL of the webhook avatar image
-  avatarURL = "https://styles.redditmedia.com/t5_2kl3ct/styles/communityIcon_am5zopqnjhs41.png"
+  avatarURL = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/91/Map_Zoom_0.png/revision/latest?cb=20200311153330"
   # The name format of the message forwarded to the dynmap webchat
   # 
   # PLACEHOLDERS:
@@ -248,4 +272,4 @@ ignoredCommands = [  "list", "help", "?"  ]
   # Do NOT use for actual offline mode servers, as this will break the linking feature because of the UUIDs!
   # 
   # Currently no support for floodgate running on bungee
-  isBehindBungee = false
+  isBehindBungee = true

@@ -1,10 +1,6 @@
 {
   "_c1": "Keep this one at 0, unless you credit this library in another way",
   "coreCommandOperatorLevel": 0,
-  "_c2": "Marks resource pack as forced, only effects clients and mods using api to check it",
-  "markResourcePackAsForcedByDefault": false,
-  "_c3": "Force-enables offset of CustomModelData",
-  "forcePackOffset": false,
   "_c4": "Toggles Polymer's networking globally. It's recommended to leave it to true for better experience",
   "enableNetworkSync": true,
   "_c5": "Logs warnings while creating template/filter entities",
@@ -24,5 +20,7 @@
   "_c11": "Makes polymer report time it's handshake took",
   "logHandshakeTime": false,
   "_c12": "Enables logging of BlockState ids rebuilds",
-  "logBlockStateRebuilds": true
+  "logBlockStateRebuilds": true,
+  "_c13": "Enables logging of more exceptions. Useful when debugging",
+  "logAllExceptions": false
 }

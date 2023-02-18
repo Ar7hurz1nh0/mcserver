@@ -35,6 +35,7 @@
   "invincibleTime": 2,
   "keepBlockAfterBreaking": false,
   "restoreBlockAfterPlayerBreaking": true,
+  "maxGraveCount": -1,
   "xpStorageType": "percent_points",
   "xpPercentTypeValue": 100.0,
   "teleportHeight": 0.5,
@@ -138,6 +139,9 @@
   "guiQuickPickupText": "<yellow><lang:'text.graves.gui.quick_pickup'>",
   "guiCantReverseAction": "<dark_red><bold><lang:'text.graves.gui.cant_reverse'>",
   "guiClickToConfirm": "<white><lang:'text.graves.gui.click_to_confirm'>",
+  "guiFetchText": "<yellow><lang:'text.graves.gui.fetch'>",
+  "guiBackText": "<red><lang:'gui.back'>",
+  "guiFetchFailedText": "<red><lang:'text.graves.gui.fetch_failed'>",
   "guiTeleportActiveText": "<#a52dfa><lang:'text.graves.gui.teleport'>",
   "guiTeleportNotEnoughText": "<dark_gray><lang:'text.graves.gui.teleport'>",
   "guiTeleportCostActiveText": "<white><lang:'text.graves.gui.teleport.cost'> <#cfcfcf>${item} × ${count}",
@@ -151,6 +155,8 @@
   "guiRemoveProtectionIcon": "universal_graves:icon{Texture:\"remove_protection\"}",
   "guiBreakGraveIcon": "universal_graves:icon{Texture:\"break_grave\"}",
   "guiTeleportIcon": "minecraft:ender_pearl",
+  "guiFetchIcon": "minecraft:lead",
   "guiQuickPickupIcon": "universal_graves:icon{Texture:\"quick_pickup\"}",
+  "guiBackItem": "minecraft:structure_void",
   "CONFIG_VERSION_DONT_TOUCH_THIS": 2
 }

@@ -1,15 +1,26 @@
-_backup
-.fabric
-.mixin.out
-backup
-crash-reports
 DiscordIntegration-Data
-logs
-mcmap
-probably-broken-regions
-versions
-world
-*.log
 mods/EasyAuth/levelDBStore
 mods/disabled
-./mcsleepingserverstarter-linux-x64
+java
+proxyip
+forwarding.secret
+
+# Fabric stuff
+.fabric
+.mixin.out
+versions
+
+# Logs
+crash-reports
+logs
+*.log
+
+# Backup folders
+world-link
+backup
+
+# World files
+world/*
+!world/carpet.conf
+!world/carpet-fixes.conf
+!world/datapacks
